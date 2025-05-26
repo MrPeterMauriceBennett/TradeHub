@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Trade Platform for Africa">
+    <meta name="keywords" content="AfCFTA, One Stop Border Posts, OSBP,  Digital Trade Transformation, Strategic Trade Corridors, Bulk Goods Transportation,Logistics, Cross-border Trade, Free Trade Zones, Circular Economy ">
+    <meta name="author" content="Mercator Trade Platform">
+    <title>Mercator Trade Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Apply modern font */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 5px 20px; /* Reduced top and bottom padding by 10px */
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            margin-right: 10px; /* Add 10px space between the logo and the h1 */
+            margin-left: -25px; /* Move the logo 5px to the left */
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+            font-weight: 500; /* Medium weight for a clean look */
+        }
+        .section {
+            margin: 5px 0; /* Reduced margin to bring sections closer */
+            padding-top: 10px; /* Adjusted padding for spacing */
+        }
+        .section h2 {
+            font-weight: 700; /* Bold for section titles */
+        }
+        .section p, .section ul {
+            font-weight: 400; /* Regular weight for body text */
+        }
+        .hero-image {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure the entire image is visible */
+        }
+        #hero {
+            margin: 5px; /* Remove margin around the hero section */
+            padding: 5px; /* Remove padding around the hero section */
+            padding-top: 60px; /* Add padding to prevent clipping at the top */
+        }
+        #about {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 10px; /* Reduced bottom margin to minimize white space */
+        }
+        .footer {
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+            text-align: center;
+            padding: 10px 0; /* Add some padding for spacing */
+            width: 100%; /* Ensure the footer spans the full width of the page */
+            position: relative; /* Ensure it stays within the flow of the page */
+        }
+        .hamburger-menu {
+            position: absolute;
+            right: 70px; /* Move the menu 50px to the left (20px + 50px) */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu-list {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-list li {
+            margin: 5px 0;
+        }
+
+        .menu-list li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .menu-list li a:hover {
+            color: #CC6666; /* Highlight color */
+        }
+
+        /* Add responsive styles for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .header .logo {
+                margin: 0 auto 10px auto; /* Center the logo and add spacing */
+            }
+
+            .header h1 {
+                font-size: 20px; /* Reduce font size for smaller screens */
+            }
+
+            .hamburger-menu {
+                right: 10px; /* Adjust position for smaller screens */
+            }
+
+            .hero-image {
+                width: 100%;
+                height: auto; /* Ensure the image scales properly */
+            }
+
+            #hero {
+                padding-top: 80px; /* Adjust padding for better spacing */
+            }
+
+            #about {
+                margin: 10px; /* Reduce margins for smaller screens */
+            }
+
+            .footer {
+                padding: 15px 0; /* Add more padding for better touch interaction */
+            }
+
+            .menu-list {
+                width: 100%; /* Make the menu span the full width */
+                right: 0;
+                top: 50px; /* Adjust position */
+            }
+
+            .menu-list li {
+                text-align: center; /* Center menu items */
+            }
+
+            .menu-list li a {
+                font-size: 18px; /* Increase font size for better readability */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="Pictures/icon.png" alt="MercatorTrade Platform Logo" class="logo" width="50" height="50">
+        <h1>Mercator Trade Platform</h1>
+        <nav class="hamburger-menu">
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
+            <ul class="menu-list" id="menuList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="demos.html">Demos</a></li> <!-- Added Demos menu item -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section" style="position: relative;">
+        <img src="Pictures/hero.png" alt="Hero Image of Mercator Trade Platform" class="hero-image">
+        <a href="mailto:peter.bennett@mercator.solutions" style="
+            position: absolute;
+            bottom: 20px; /* Position the button 20px above the bottom of the hero image */
+            left: 50%; /* Center horizontally within the hero image */
+            transform: translateX(-50%); /* Adjust to center the button */
+            padding: 10px 20px;
+            background-color: rgba(204, 102, 102, 0.75); /* Increased transparency by 25% */
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            border-radius: 25px; /* Rounded corners */
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        ">Contact Us</a>
+    </section>
+
+    <section id="about" class="section">
+  <h1>A Continental Digital Trade Platform for Africa</h1>
+  <p>The African Continental Free Trade Area (AfCFTA) is poised to revolutionise cross-border trade, driving a circular economy powered by abundant raw materials, and enhanced manufacturing capabilities.</p>
+  <p>Dismantlement of barriers to trade is paving the way for seamless trade flows, and reduced friction across borders.</p>
+  <p>Transformative infrastructure investments are reshaping the capacity for bulk goods transportation: strategic trade corridors, railways, waterways, pipelines, one-stop border posts, multimodal hubs, and world-class seaports.</p>
+  <p>State-of-the-art hyperscale cloud datacenters on African soil are enabling the creation of cutting-edge digital infrastructure to complement and amplify these advancements.</p>
+  <p>Our vision is bold: a cloud-based digital trade facilitation platform with unparalleled scope, scale, and reach across the African Continent.</p>
+  <p>We see an unprecedented opportunity for Africa to sprint into the future with a clean-slate approach, designing and implementing a world-class digital platform that empowers all stakeholders in the free trade ecosystem.</p>
+  <p>Join us in shaping the future of digital trade. Whether you have the expertise to engineer this transformation or are eager to be an early adopter, we want to hear from you.</p>
+</section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mercator Trade Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menuList = document.getElementById('menuList');
+            menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
