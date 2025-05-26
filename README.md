@@ -1,2 +1,2 @@
 # TradeHub
-Landing Page
+Landing Page + Demo PWA applications
